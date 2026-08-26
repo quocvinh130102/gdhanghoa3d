@@ -145,6 +145,14 @@
         .pulse-cta {
             animation: pulse-glow 2s ease-in-out infinite;
         }
+        /* Fixed background chỉ áp dụng mượt trên desktop.
+           Trên mobile (đặc biệt iOS Safari), background-attachment: fixed
+           gây giật/lỗi hiển thị, nên chuyển về scroll bình thường. */
+        @media (max-width: 767px) {
+            section[style*="background-attachment: fixed"] {
+                background-attachment: scroll !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -290,7 +298,7 @@
 </div>
 </section>
 <!-- What You Will Learn Section -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter relative z-10 from-transparent to-primary-container/80 bg-deep-navy" id="chuyen-gia" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC4roDCiHFk0jzmF6btqpr48HvzRe5sLgBuWcNNOWRlTWf192ZlsKgi-ZVNlS8iyqfqAset6-V1dkw72I_F_lCogR9CsoADjQKX_m8YbbCfmQwcfdV8VOTZz_JM3TbKA2LIVuWRWdThehB45lXLNnfB5HKGtmNVXSUDbp02Sd-an2bYrhpkP-hC3VAtY9htDq88ieTWsNWSA7wjLiWfbE02IEuYpyAAnc0nPGrkPweGRszsQtg65Rlzxlk29XDznHhzZA&quot;); background-size: cover; background-position: center center;">
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter relative z-10 from-transparent to-primary-container/80 bg-deep-navy" id="chuyen-gia" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC4roDCiHFk0jzmF6btqpr48HvzRe5sLgBuWcNNOWRlTWf192ZlsKgi-ZVNlS8iyqfqAset6-V1dkw72I_F_lCogR9CsoADjQKX_m8YbbCfmQwcfdV8VOTZz_JM3TbKA2LIVuWRWdThehB45lXLNnfB5HKGtmNVXSUDbp02Sd-an2bYrhpkP-hC3VAtY9htDq88ieTWsNWSA7wjLiWfbE02IEuYpyAAnc0nPGrkPweGRszsQtg65Rlzxlk29XDznHhzZA&quot;); background-size: cover; background-position: center center; background-attachment: fixed;">
 <div class="mx-auto max-w-container-max">
 <div class="text-center mb-12 fade-up visible">
 <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-primary uppercase tracking-tight">BẠN SẼ HỌC ĐƯỢC GÌ TẠI CHƯƠNG TRÌNH 3 NGÀY NÀY</h2>
@@ -323,7 +331,7 @@
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="py-section-padding-desktop px-gutter relative z-10" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCrTtoTcbL1v_zDsswR3K1LdgM9UrxsAWtYs3BhK-kdJLmRqah8Pq1V9JzfkmC58IFWnBuV2UqOiYPlpUy9Eq8vq-oVgi6e3fyAtnYBTf6gZpst_5K2sQAFEi0IjQgCRdmz7qPnTY66iiLIsQSzm7EG9eb4g_fD0JzC6XhRG5xyxsTsm2n4pIMvemW-VR_FubsnfUR436wQXjOGD_5GYMar-WuoUreilfHlZD3jCCsXl2px12aLNGZHKEXUAXM2dPZDLg&quot;); background-size: cover; background-position: center center;">
+<section class="py-section-padding-desktop px-gutter relative z-10" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCrTtoTcbL1v_zDsswR3K1LdgM9UrxsAWtYs3BhK-kdJLmRqah8Pq1V9JzfkmC58IFWnBuV2UqOiYPlpUy9Eq8vq-oVgi6e3fyAtnYBTf6gZpst_5K2sQAFEi0IjQgCRdmz7qPnTY66iiLIsQSzm7EG9eb4g_fD0JzC6XhRG5xyxsTsm2n4pIMvemW-VR_FubsnfUR436wQXjOGD_5GYMar-WuoUreilfHlZD3jCCsXl2px12aLNGZHKEXUAXM2dPZDLg&quot;); background-size: cover; background-position: center center; background-attachment: fixed;">
 <div class="max-w-4xl mx-auto">
 <div class="text-center mb-12 fade-up visible">
 <h2 class="text-headline-md md:text-headline-lg font-headline-lg text-on-primary mb-4">NHỮNG CÂU HỎI THƯỜNG GẶP</h2>
@@ -358,7 +366,7 @@
 </div>
 </section>
 <!-- Registration Section -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter relative z-10 bg-deep-navy border-y border-gold-accent/10" style="background-image: linear-gradient(rgba(0, 35, 46, 0.7), rgba(0, 35, 46, 0.7)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCeclwPZnsOQlsQ-x-1LeYRqrCMJNmf7_G5tXz5ZObGAY8A9amFNLIqF4-ueI_50j6MH-zzPhAaiIMfnjXr3Po7PfTz9Jpqb1TV8u4-uQ-wI4hHBDloXpi5DTBzFfCSP3kJbUELQIge1--TDtdnoJuk5Fs5miYide0_KBBsVUD72biVabrCzaOqzDTiqLp1CWrfA0gXChlA-FH5oeFQYYvZZ_-CkPOVjPW6-i3pUXUwDccczjNxAHifbwY8YAt-Kg1TJQ&quot;); background-size: cover; background-position: center center;">
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter relative z-10 bg-deep-navy border-y border-gold-accent/10" style="background-image: linear-gradient(rgba(0, 35, 46, 0.7), rgba(0, 35, 46, 0.7)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCeclwPZnsOQlsQ-x-1LeYRqrCMJNmf7_G5tXz5ZObGAY8A9amFNLIqF4-ueI_50j6MH-zzPhAaiIMfnjXr3Po7PfTz9Jpqb1TV8u4-uQ-wI4hHBDloXpi5DTBzFfCSP3kJbUELQIge1--TDtdnoJuk5Fs5miYide0_KBBsVUD72biVabrCzaOqzDTiqLp1CWrfA0gXChlA-FH5oeFQYYvZZ_-CkPOVjPW6-i3pUXUwDccczjNxAHifbwY8YAt-Kg1TJQ&quot;); background-size: cover; background-position: center center; background-attachment: fixed;">
 <div class="max-w-4xl mx-auto">
 <div class="mb-12 text-center md:text-left">
 <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-primary mb-4 uppercase tracking-tight text-center">BỐI CẢNH &amp; THÔNG TIN CHƯƠNG TRÌNH</h2>
