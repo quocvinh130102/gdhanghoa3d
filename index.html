@@ -437,17 +437,55 @@
 </section>
 <!-- Registration Section -->
 <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter relative z-10 bg-white border-y border-gold-accent/10" style="background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCeclwPZnsOQlsQ-x-1LeYRqrCMJNmf7_G5tXz5ZObGAY8A9amFNLIqF4-ueI_50j6MH-zzPhAaiIMfnjXr3Po7PfTz9Jpqb1TV8u4-uQ-wI4hHBDloXpi5DTBzFfCSP3kJbUELQIge1--TDtdnoJuk5Fs5miYide0_KBBsVUD72biVabrCzaOqzDTiqLp1CWrfA0gXChlA-FH5oeFQYYvZZ_-CkPOVjPW6-i3pUXUwDccczjNxAHifbwY8YAt-Kg1TJQ&quot;); background-size: cover; background-position: center center; background-attachment: fixed;">
-    <div class="max-w-4xl mx-auto">
+    <!-- Nới rộng max-w-6xl để thẻ ngang có đủ không gian hiển thị 3 cột -->
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Phần Tiêu đề Section (Giữ nguyên text màu tối cho nền sáng) -->
         <div class="mb-12 text-center md:text-left">
-            <!-- Đổi text-on-primary thành text-[#0A1D37] (xanh đen) để tương phản với nền sáng -->
             <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-[#0A1D37] font-bold mb-4 uppercase tracking-tight text-center">BỐI CẢNH &amp; THÔNG TIN CHƯƠNG TRÌNH</h2>
             <div class="h-1 w-24 bg-gold-accent rounded mx-auto"></div>
         </div>
-<div class="space-y-8 text-primary-fixed-dim font-body-lg leading-relaxed">
-<p class="glass-card p-8 rounded-xl text-on-primary text-center">Thị trường tài chính Việt Nam đang bước vào giai đoạn chuyển mình mạnh mẽ. Trong khi nhiều người vẫn loay hoay giữ tiền mặt hoặc gửi tiết kiệm với lãi suất ngày càng thấp, những nhà đầu tư hiểu biết đã bắt đầu xây dựng danh mục tài sản đúng cách để bảo toàn và gia tăng giá trị.</p>
-<p class="glass-card p-8 rounded-xl text-on-primary text-center">Cơ hội lớn từ giao dịch hàng hóa được tổ chức bởi Công ty giao dịch hàng hóa 3D nhằm giúp bạn - dù là người mới bắt đầu hay đã có kinh nghiệm - xây dựng tư duy đầu tư đúng đắn, dựa trên kiến thức thực chiến từ chuyên gia trong ngành.</p>
-</div>
-</div>
+
+        <!-- THẺ NỘI DUNG (MỚI) DỰA THEO MẪU ẢNH -->
+        <div class="relative w-full rounded-2xl bg-gradient-to-r from-[#1D4477] to-[#0A1E40] p-8 md:p-10 shadow-2xl border border-blue-400/20 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+            
+            <!-- Cột Trái: Dữ liệu MXV (Chiếm khoảng 35%) -->
+            <div class="w-full md:w-[35%] space-y-4 text-left">
+                <h4 class="text-white font-bold text-lg md:text-xl italic leading-snug">
+                    Theo dữ liệu từ Sở Giao dịch Hàng hóa Việt Nam (MXV):
+                </h4>
+                <p class="text-gray-200 text-base leading-relaxed">
+                    Thanh khoản bình quân đạt <span class="font-bold text-[#FBBF24]">7.500 tỷ đồng/ngày</span>, tăng gần <span class="font-bold text-white">46%</span> so với năm trước. Thậm chí có phiên chạm mốc <span class="font-bold text-[#FBBF24]">17.000 tỷ đồng</span> – mức cao nhất từ trước đến nay.
+                </p>
+            </div>
+
+            <!-- Cột Giữa: Placeholder cho Hình ảnh (Chiếm khoảng 30%) -->
+            <div class="w-full md:w-[30%] flex justify-center py-4 md:py-0 relative z-10">
+                <!-- VỊ TRÍ ĐỂ BẠN UPDATE ẢNH SAU -->
+                <!-- Chỉ cần thay link vào thẻ src bên dưới -->
+                <img src="bc1.png" alt="Minh họa hàng hóa" class="w-full max-w-[240px] md:max-w-[300px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300">
+                
+                <!-- Hiệu ứng sáng mờ phía sau ảnh (tùy chọn, giúp ảnh nổi bật hơn) -->
+                <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full z-[-1]"></div>
+            </div>
+
+            <!-- Cột Phải: Định nghĩa & Cơ hội (Chiếm khoảng 35%) -->
+            <div class="w-full md:w-[35%] space-y-4 text-left">
+                <h4 class="text-[#FBBF24] font-bold text-xl md:text-2xl uppercase tracking-wide">
+                    VẬY HÀNG HÓA PHÁI SINH LÀ GÌ?
+                </h4>
+                <p class="text-gray-200 text-base leading-relaxed">
+                    Đây chính là thị trường hàng hóa phái sinh – một kênh đầu tư đang ngày càng thu hút sự quan tâm của nhà đầu tư Việt Nam trong năm 2026.
+                </p>
+                <p class="text-gray-200 text-base leading-relaxed">
+                    <span class="font-semibold text-white">Cơ hội lớn</span> từ giao dịch hàng hóa được tổ chức bởi Công ty giao dịch hàng hóa 3D nhằm giúp bạn - dù là người mới bắt đầu hay đã có kinh nghiệm - xây dựng tư duy đầu tư đúng đắn, dựa trên kiến thức thực chiến từ chuyên gia trong ngành.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 </section><section class="py-section-padding-desktop px-gutter relative z-10" id="dang-ky">
 <div class="max-w-3xl mx-auto glass-card rounded-2xl p-8 md:p-12 shadow-2xl border-t-4 border-t-gold-accent fade-up visible"><div class="text-center mb-10">
 <span class="inline-block bg-gold-accent/10 text-gold-accent px-4 py-1 rounded-full text-label-sm font-bold uppercase tracking-widest mb-4">Ưu đãi giới hạn</span>
