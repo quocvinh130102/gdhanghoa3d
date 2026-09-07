@@ -204,7 +204,7 @@
 <span class="font-label-sm uppercase tracking-wider font-semibold">Học Online Trực Tiếp Với Chuyên Gia</span>
 </div>
 <!-- Khối Banner Background màu Cam -->
-<div class="w-full bg-gradient-to-br from-orange-400 to-orange-500 py-16 px-4 flex flex-col items-center justify-center font-sans relative overflow-hidden">
+<div class="w-full bg-gradient-to-br from-yellow-600 to-amber-700 py-16 px-4 flex flex-col items-center justify-center font-sans relative overflow-hidden">
     
     <!-- Container chính: Giới hạn chiều rộng, tự động căn giữa -->
     <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
@@ -496,56 +496,44 @@
 </div></div></footer>
 <!-- Scripts for animations and logic -->
 <script>
-        // Intersection Observer for fade-up animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
+  document.addEventListener('DOMContentLoaded', function () {
+    // Đếm ngược 3 ngày kể từ lúc trang được tải
+    const countdownDuration = 3 * 24 * 60 * 60 * 1000; // 3 ngày (ms)
+    const countdownTarget = Date.now() + countdownDuration;
 
-            document.querySelectorAll('.fade-up').forEach((el) => {
-                observer.observe(el);
-            });
-        });
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minsEl = document.getElementById('mins');
+    const secsEl = document.getElementById('secs');
 
-        // Countdown logic - đếm ngược thật đến thời điểm kết thúc chương trình
-        // Sửa lại ngày/giờ này cho khớp với hạn đăng ký thực tế
-        const countdownTarget = new Date('2026-07-15T20:00:00+07:00').getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownTarget - now;
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownTarget - now;
+      if (distance <= 0) {
+        daysEl.innerText = '00';
+        hoursEl.innerText = '00';
+        minsEl.innerText = '00';
+        secsEl.innerText = '00';
+        clearInterval(countdownInterval);
+        return;
+      }
 
-            const daysEl = document.getElementById('days');
-            const hoursEl = document.getElementById('hours');
-            const minsEl = document.getElementById('mins');
-            const secsEl = document.getElementById('secs');
+      const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if (distance <= 0) {
-                daysEl.innerText = '00';
-                hoursEl.innerText = '00';
-                minsEl.innerText = '00';
-                secsEl.innerText = '00';
-                clearInterval(countdownInterval);
-                return;
-            }
+      daysEl.innerText = d.toString().padStart(2, '0');
+      hoursEl.innerText = h.toString().padStart(2, '0');
+      minsEl.innerText = m.toString().padStart(2, '0');
+      secsEl.innerText = s.toString().padStart(2, '0');
+    }
 
-            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((distance % (1000 * 60)) / 1000);
-
-            daysEl.innerText = d.toString().padStart(2, '0');
-            hoursEl.innerText = h.toString().padStart(2, '0');
-            minsEl.innerText = m.toString().padStart(2, '0');
-            secsEl.innerText = s.toString().padStart(2, '0');
-        }
-        updateCountdown();
-        const countdownInterval = setInterval(updateCountdown, 1000);
-    </script>
+    updateCountdown();
+    const countdownInterval = setInterval(updateCountdown, 1000);
+  });
+</script>
 
 
 </body></html>
